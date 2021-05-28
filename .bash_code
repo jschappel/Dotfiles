@@ -1,1 +1,4 @@
-/home/joshua/.bash_code
+#!/bin/bash
+# Ocaml Env setup
+eval $(opam env)
+
