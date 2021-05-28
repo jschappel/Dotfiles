@@ -142,3 +142,10 @@ export EDITOR="nvim-qt"
 
 # Set keybindings
 setxkbmap -option caps:ctrl_modifier
+
+
+# Add Env Variables if exists
+if [ -f ".env" ]; then 
+  source .env
+fi
+
