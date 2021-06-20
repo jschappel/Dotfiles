@@ -1,0 +1,28 @@
+[user]
+	name = jschappel
+	email = jmschappel12@gmail.com
+
+[core]
+  editor = nvim
+
+[web]
+  browser = firefox
+
+[color]
+  ui = auto
+
+[credential]
+  helper = store
+
+
+[color "status"]
+  changed = yellow
+
+[diff]
+  tool = vim
+
+[difftool]
+  tool = gvimdiff
+
+[difftool "nvimdiff"]
+  cmd = "vim -d -u ~/.vimrc \"$LOCAL\" \"$REMOTE\""

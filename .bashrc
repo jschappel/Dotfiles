@@ -143,9 +143,12 @@ export EDITOR="nvim-qt"
 # Set keybindings
 setxkbmap -option caps:ctrl_modifier
 
-
+ENV_PATH="/home/joshua/.env"
 # Add Env Variables if exists
-if [ -f ".env" ]; then 
-  source .env
+if [ -f "$ENV_PATH" ]; then 
+  source $ENV_PATH
+  export DISCORD_TOKEN="ODQ3ODkyNzY1MzI5MzI2MTIw.YLErrA.lXE-niUblxII9jQ8dHAWGGQOwoI"
+else 
+  echo "Cound not find .env file"
 fi
 
