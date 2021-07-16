@@ -1,3 +1,15 @@
+#!/bin/bash
+
+# Suppress's termianl errors
+function suppressErr() {
+  $1 $2 2>/dev/null;
+}
+
+# Suppress's termianl warnings
+function suppressWarn() {
+  $1 $2 1>/dev/null;
+}
+
 # Commands
 alias mv='mv -vi'
 alias rm='rm -vi'
@@ -6,7 +18,11 @@ alias cp='cp -vi'
 # Editors
 alias vi='nvim'
 alias pdf='xdg-open'
-alias gvim='nvim-qt'
+alias gvim='suppressErr nvim-qt' #TODO: Find corrent way to fix
+alias vim='suppressErr nvim-qt'  #TODO: Find corrent way to fix
+
+#Git aliases
+alias gc='git commit'
 
 #GCC
 alias gccc='gcc -Wall -std=c++17'
@@ -43,13 +59,14 @@ alias dana='cd ~/Dana;pwd'
 # Make & CMake Commands
 alias maket='make test -C'
 alias cmakeb='cmake --build'
-
+alias ctest='ctest -VV'
 
 # Games
 alias runelite='java -jar /usr/local/bin/RuneLite.jar'
 
 
 # Other
+alias open='suppressErr xdg-open '
 alias myaddress='echo "8460 Limekiln Pk 19095 PA"'
 alias sourceme='source ~/.bashrc'
 alias updateall='sudo apt update && sudo apt upgrade -y'
