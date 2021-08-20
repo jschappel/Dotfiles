@@ -49,6 +49,10 @@ let g:airline_theme='gruvbox'
 " OCaml
 set rtp^="/home/joshua/.opam/default/share/ocp-indent/vim"
 
+
+" Haskell
+let g:ale_linters = {'haskell': ['cabal_ghc', 'ghc-mod', 'hdevtools', 'hie', 'hlint', 'stack_build', 'stack_ghc']}
+
 " ** My settings
 syntax on
 

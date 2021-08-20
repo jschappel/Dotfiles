@@ -2,3 +2,5 @@
 # Ocaml Env setup
 eval $(opam env)
 
+# SML setup
+alias smli='rlwrap sml'
