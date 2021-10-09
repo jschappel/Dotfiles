@@ -37,7 +37,7 @@ if (empty($TMUX))
   endif
 endif
 
-" Load in plugins
+" Load in plugins.
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
 Plug 'morhetz/gruvbox'
@@ -59,7 +59,7 @@ let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 
-:let g:netrw_browsex_viewer= "xdg-open"
+let g:netrw_browsex_viewer= "xdg-open"
 
 " Keybindings
 noremap <silent>,<space> :nohlsearch<CR>
