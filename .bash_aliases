@@ -19,7 +19,7 @@ alias cp='cp -vi'
 alias vi='nvim'
 alias pdf='xdg-open'
 alias gvim='suppressErr nvim-qt' #TODO: Find corrent way to fix
-alias vim='suppressErr nvim-qt'  #TODO: Find corrent way to fix
+alias vim='nvim'  #TODO: Find corrent way to fix
 
 #Git aliases
 alias gc='git commit'

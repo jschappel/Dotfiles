@@ -1,10 +1,12 @@
 syntax on
+filetype plugin indent on
 
 set mouse=a
 set number "Line Number
 set showcmd "Show command
 set wildmenu "Auto complete menu
 set showmatch "Hightlight matching braces
+set clipboard=unnamedplus
 
 " Indentation
 set tabstop=2
@@ -44,7 +46,22 @@ Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'dense-analysis/ale'
+Plug 'pangloss/vim-javascript'
+Plug 'neovimhaskell/haskell-vim'
+Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
+
+" Ale Configs
+let g:ale_linters = {
+      \'haskell': ['cabal_ghc', 'ghc-mod', 'hdevtools', 'hie', 'hlint', 'stack_build', 'stack_ghc'],
+      \'ocaml': ['ocamlformat'],
+      \'*': ['remove_trailing_lines', 'trim_whitespace'],
+\}
+
+" Vim javascript Stuff
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_ngdoc = 1
+
 
 " Enable Airline stuff
 let g:airline#extensions#tabline#enabled = 1 " Enable the list of buffers
@@ -52,6 +69,10 @@ let g:airline_theme='tomorrow'
 if !exists('g:airline_symbols')
   let g:airline_symbols = {}
 endif
+" change the way buffers are shown
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+
 
 " powerline symbols
 let g:airline_left_sep = ''
@@ -63,5 +84,20 @@ let g:netrw_browsex_viewer= "xdg-open"
 
 " Keybindings
 noremap <silent>,<space> :nohlsearch<CR>
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
 
-colorscheme gruvbox
+" colorscheme gruvbox
+colorscheme PaperColor
+"hi CursorLineNR cterm=bold
+"augroup CLNRSet
+"    autocmd! ColorScheme * hi CursorLineNR cterm=bold
+"augroup END
+
+highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
+set cursorline
+" TODO: Fix Paren highlighting
+" set parne highlight color
+" hi MatchParen cterm=underline ctermbg=green ctermfg=blue
