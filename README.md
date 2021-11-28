@@ -1,1 +1,1 @@
-# Linux Backup Files
+# Linux and MacOS Backup Files

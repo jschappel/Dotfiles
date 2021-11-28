@@ -115,8 +115,10 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+if [ -f $(pwd)/.bash_aliases ]; then
+  . $(pwd)/.bash_aliases
+else
+  echo ".bash_aliases not found in: '$(pwd)/.bash_aliases'"
 fi
 
 # enable programmable completion features (you don't need to enable
@@ -135,7 +137,7 @@ QT_LOGGING_RULES="*.debug=false" # Suppress nvim stuff
 
 
 # Include Exteral Scripts
-. ~/.bash_code
+. $(pwd)/.bash_code
 
 # Set defualt editor
 export EDITOR="nvim-qt"
