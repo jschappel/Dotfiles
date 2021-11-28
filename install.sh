@@ -13,13 +13,14 @@ projects=(
   zsh
 )
 
+echo "Symlinking files..."
 for proj in "${projects[@]}"; do
   if [ "$proj" == "bash" ] && [ "$OS" == "Darwin" ]; then # MAC
-    echo "-Skipping bash linking..."
+    continue
   elif [ "$proj" == "zsh" ] && [ "$OS" == "Linux" ]; then
-    echo "-Skipping zsh linking..."
+    continue
   else
-    echo "Installing: $proj"
+    echo "  $proj"
     HEREP="$HERE/$proj"
     . $HEREP/install.sh
   fi

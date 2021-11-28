@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
 # Softlink dotfiles to home area
-ln -svf $HEREP/.zshrc $HOME
-ln -svf $HEREP/.zsh_aliases $HOME
+ln -sf $HEREP/.zshrc $HOME
+ln -sf $HEREP/.zsh_aliases $HOME
