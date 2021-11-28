@@ -18,8 +18,8 @@ alias cp='cp -vi'
 # Editors
 alias vi='nvim'
 alias pdf='xdg-open'
-alias gvim='suppressErr nvim-qt' #TODO: Find corrent way to fix
-alias vim='nvim'  #TODO: Find corrent way to fix
+alias gvim='suppressErr nvim-qt'
+alias vim='nvim'
 
 #Git aliases
 alias gc='git commit'
@@ -32,6 +32,9 @@ alias g++c='g++ -Wall -std=c++17'
 alias clangf='clang-format -i -style=Google'
 alias clangc='clang++ -Wall -std=c++17'
 
+# Python
+alias python='python3'
+
 #Terminals
 alias gterm='gnome-terminal'
 alias gtab='gnome-terminal --tab'
@@ -40,8 +43,8 @@ alias xtw='xterm -fa Monospace -fs 12 &'
 
 # Internet Browser
 alias weather='curl wttr.in'
-alias ff='~/Scripts/bash/firefox_search.sh -s'
-alias ffw='~/Scripts/bash/firefox_search.sh -w'
+alias ff="$HOME/Github/Dotfiles/bash/firefox_search.sh -s"
+alias ffw="$HOME/Github/Dotfiles/bash/firefox_search.sh -w"
 
 # Directories
 alias ghd='cd ~/Github;pwd'
