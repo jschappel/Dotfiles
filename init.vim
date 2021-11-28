@@ -1,5 +1,4 @@
 syntax on
-
 set mouse=a
 set number "Line Number
 set showcmd "Show command
@@ -20,6 +19,7 @@ set hlsearch
 set ignorecase
 set smartcase
 
+filetype plugin on 
 
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
@@ -61,7 +61,12 @@ let g:airline_right_alt_sep = ''
 
 let g:netrw_browsex_viewer= "xdg-open"
 
+"" Ocaml ale setup
+let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+execute "set rtp+=" . g:opamshare . "/merlin/vim"
+
+
 " Keybindings
 noremap <silent>,<space> :nohlsearch<CR>
-
+let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
