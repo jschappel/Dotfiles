@@ -2,7 +2,6 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
-
 function mkPrompt() {
     lambda=$(echo -e '\xCE\xBB')
     #PS1='\e[1;32mJSchappel\e[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[$lambda\]\[\033[00m\]'
@@ -115,8 +114,8 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f $(pwd)/.bash_aliases ]; then
-  . $(pwd)/.bash_aliases
+if [ -f $HOME/.bash_aliases ]; then
+  . $HOME/.bash_aliases
 else
   echo ".bash_aliases not found in: '$(pwd)/.bash_aliases'"
 fi
@@ -135,10 +134,10 @@ fi
 
 QT_LOGGING_RULES="*.debug=false" # Suppress nvim stuff
 
-
 # Include Exteral Scripts
-. $(pwd)/.bash_code
-
+if [ -f "$HOME/.bash_code" ]; then
+. $HOME/.bash_code
+fi
 # Set defualt editor
 export EDITOR="nvim-qt"
 
