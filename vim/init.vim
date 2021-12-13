@@ -82,8 +82,16 @@ let g:airline_right_alt_sep = ''
 
 let g:netrw_browsex_viewer= "xdg-open"
 
+"" Ocaml ale setup
+let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+execute "set rtp+=" . g:opamshare . "/merlin/vim"
+
+
 " Keybindings
 noremap <silent>,<space> :nohlsearch<CR>
+let g:gruvbox_contrast_dark = 'hard'
+colorscheme gruvbox
+
 nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
