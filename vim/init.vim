@@ -84,7 +84,6 @@ let g:netrw_browsex_viewer= "xdg-open"
 
 "" Ocaml ale setup
 let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-execute "set rtp+=" . g:opamshare . "/merlin/vim"
 
 
 " Keybindings
