@@ -3,3 +3,4 @@
 # Softlink dotfiles to home area
 ln -sf $HEREP/.zshrc $HOME
 ln -sf $HEREP/.zsh_aliases $HOME
+ln -sf $HEREP/.zprofile $HOME
