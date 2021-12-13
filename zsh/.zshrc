@@ -46,7 +46,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-  PROMPT='%F{green}[%n]%f:%F{blue}%c%f$ '
+  PROMPT='%B%F{green}[%n]%f%b:%F{blue}%c%f$ '
 else
   PS1='[\T]Jschappel$'
 fi
@@ -80,8 +80,8 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f $(pwd)/.zsh_aliases ]; then
-  . $(pwd)/.zsh_aliases
+if [ -f ~/.zsh_aliases ]; then
+  . ~//.zsh_aliases
 else
   echo ".zsh_aliases not found in: '$(pwd)/.zsh_aliases'"
 fi
@@ -90,3 +90,4 @@ QT_LOGGING_RULES="*.debug=false" # Suppress nvim stuff
 
 # Set defualt editor
 export EDITOR="nvim"
+[ -f "/Users/joshuaschappel/.ghcup/env" ] && source "/Users/joshuaschappel/.ghcup/env" # ghcup-env
