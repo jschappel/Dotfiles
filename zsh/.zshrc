@@ -46,7 +46,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-  PROMPT='%B%F{green}[%n]%f%b:%F{blue}%c%f$ '
+  PROMPT='%B%F{green}[%n]%f%b:%B%F{blue}%c%f%b$ '
 else
   PS1='[\T]Jschappel$'
 fi
@@ -62,7 +62,8 @@ alias egrep='egrep --color=auto'
 
 # Set terminal colors
 export CLICOLOR=1
-
+# For colors see: https://apple.stackexchange.com/questions/282185/how-do-i-get-different-colors-for-directories-etc-in-iterm2
+export LSCOLORS="ExGxfxcxCxBxegecabagacad" # default exfxcxdxbxegedabagacad
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
