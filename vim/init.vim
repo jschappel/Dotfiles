@@ -56,6 +56,7 @@ let g:ale_linters = {
       \'haskell': ['cabal_ghc', 'ghc-mod', 'hdevtools', 'hie', 'hlint', 'stack_build', 'stack_ghc'],
       \'ocaml': ['ocamlformat'],
       \'*': ['remove_trailing_lines', 'trim_whitespace'],
+      \'python' : ['flake8'],
 \}
 
 " Vim javascript Stuff
