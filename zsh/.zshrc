@@ -46,7 +46,7 @@ if [ -n "$force_color_prompt" ]; then
 fi
 
 if [ "$color_prompt" = yes ]; then
-  PROMPT='%F{green}[%n]%f:%F{blue}%c%f$ '
+  PROMPT='%B%F{green}[%n]%f%b:%B%F{blue}%c%f%b$ '
 else
   PS1='[\T]Jschappel$'
 fi
@@ -62,7 +62,8 @@ alias egrep='egrep --color=auto'
 
 # Set terminal colors
 export CLICOLOR=1
-
+# For colors see: https://apple.stackexchange.com/questions/282185/how-do-i-get-different-colors-for-directories-etc-in-iterm2
+export LSCOLORS="ExGxfxcxCxBxegecabagacad" # default exfxcxdxbxegedabagacad
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
@@ -80,8 +81,8 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f $(pwd)/.zsh_aliases ]; then
-  . $(pwd)/.zsh_aliases
+if [ -f ~/.zsh_aliases ]; then
+  . ~//.zsh_aliases
 else
   echo ".zsh_aliases not found in: '$(pwd)/.zsh_aliases'"
 fi
@@ -90,3 +91,4 @@ QT_LOGGING_RULES="*.debug=false" # Suppress nvim stuff
 
 # Set defualt editor
 export EDITOR="nvim"
+[ -f "/Users/joshuaschappel/.ghcup/env" ] && source "/Users/joshuaschappel/.ghcup/env" # ghcup-env
