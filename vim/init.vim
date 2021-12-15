@@ -98,7 +98,7 @@ nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
 
 " colorscheme gruvbox
-colorscheme PaperColor
+" colorscheme PaperColor
 "hi CursorLineNR cterm=bold
 "augroup CLNRSet
 "    autocmd! ColorScheme * hi CursorLineNR cterm=bold
