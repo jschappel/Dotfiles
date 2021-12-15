@@ -84,21 +84,24 @@ let g:airline_right_alt_sep = ''
 let g:netrw_browsex_viewer= "xdg-open"
 
 "" Ocaml ale setup
-let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-
+if (has("ocaml"))
+  let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+endif
 
 " Keybindings
 noremap <silent>,<space> :nohlsearch<CR>
+
+" Set Colorscheme
 let g:gruvbox_contrast_dark = 'hard'
 colorscheme gruvbox
+" colorscheme PaperColor
+
 
 nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
 
-" colorscheme gruvbox
-" colorscheme PaperColor
 "hi CursorLineNR cterm=bold
 "augroup CLNRSet
 "    autocmd! ColorScheme * hi CursorLineNR cterm=bold
@@ -106,6 +109,4 @@ nmap <silent> <A-Right> :wincmd l<CR>
 
 highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
 set cursorline
-" TODO: Fix Paren highlighting
-" set parne highlight color
-" hi MatchParen cterm=underline ctermbg=green ctermfg=blue
+"highlight MatchParen cterm=underline ctermbg=green ctermfg=blue
