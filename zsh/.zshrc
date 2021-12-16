@@ -23,6 +23,19 @@ HISTFILESIZE=2000
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
+# Auto change npm version based on .nvmrc
+autoload -U add-zsh-hook
+load-nvmrc() {
+  if [[ -f .nvmrc && -r .nvmrc ]]; then
+    echo "HERE"
+    nvm use
+  elif [[ $(nvm version) != $(nvm version default)  ]]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+#load-nvmrc
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
@@ -92,3 +105,9 @@ QT_LOGGING_RULES="*.debug=false" # Suppress nvim stuff
 # Set defualt editor
 export EDITOR="nvim"
 [ -f "/Users/joshuaschappel/.ghcup/env" ] && source "/Users/joshuaschappel/.ghcup/env" # ghcup-env
+
+
+# Joor env optimizations
+if [ -f $HOME/.joor_env ]; then
+  . $HOME/.joor_env
+fi

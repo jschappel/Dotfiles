@@ -33,7 +33,7 @@ alias clangf='clang-format -i -style=Google'
 alias clangc='clang++ -Wall -std=c++17'
 
 # Python
-alias python='python3'
+alias pip='pip3'
 
 #Terminals
 alias gterm='gnome-terminal'
@@ -65,9 +65,9 @@ alias maket='make test -C'
 alias cmakeb='cmake --build'
 alias ctest='ctest -VV'
 
-# Games
-alias runelite='java -jar /usr/local/bin/RuneLite.jar'
 
+# Joor aliases
+alias joor='cd ~/Github/JoorRepos;pwd'
 
 # Other
 alias open='suppressErr xdg-open '
