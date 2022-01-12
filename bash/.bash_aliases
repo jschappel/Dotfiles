@@ -68,6 +68,9 @@ alias ctest='ctest -VV'
 # Games
 alias runelite='java -jar /usr/local/bin/RuneLite.jar'
 
+# Joor aliases
+alias repos="cd ~/JOOR/dev/apps;pwd"
+alias crete="cd ~/JOOR/dev/apps/crete;pwd"
 
 # Other
 alias open='suppressErr xdg-open '

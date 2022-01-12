@@ -152,3 +152,6 @@ else
   echo "Cound not find .env file"
 fi
 
+if [ -f $HOME/joor_env ]; then
+  source $HOME/joor_env
+fi
