@@ -6,7 +6,7 @@ function mkPrompt() {
     lambda=$(echo -e '\xCE\xBB')
     #PS1='\e[1;32mJSchappel\e[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\[$lambda\]\[\033[00m\]'
     #PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ ' #origional 
-    PS1='\[\033[01;32m\]JSchappel\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='\[\033[01;32m\]JSchappel\[\033[00m\]:\[\033[01;34m\]\W\[\033[00m\]\$ '
 }
 
 
@@ -152,6 +152,6 @@ else
   echo "Cound not find .env file"
 fi
 
-if [ -f $HOME/joor_env ]; then
-  source $HOME/joor_env
+if [ -f $HOME/.joor_env ]; then
+  source $HOME/.joor_env
 fi

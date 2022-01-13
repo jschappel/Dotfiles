@@ -16,7 +16,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # setting up nvm stuff
 cdnvm() {
-    command cd "$@";
+  command cd "$(pwd)";
     nvm_path=$(nvm_find_up .nvmrc | tr -d '\n')
 
     # If there are no .nvmrc file, use the default nvm version
@@ -57,5 +57,4 @@ cdnvm() {
         fi
     fi
 }
-alias cd='cdnvm'
-cd "$PWD"
+alias nconfig="cdnvm"
