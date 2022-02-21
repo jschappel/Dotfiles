@@ -155,3 +155,8 @@ fi
 if [ -f $HOME/.joor_env ]; then
   source $HOME/.joor_env
 fi
+
+
+
+USE_CONTAINERS=atlas,backend,backend.python,backend.python.grpc,redis,postgres,www,web.php,traefik,hyperion
+

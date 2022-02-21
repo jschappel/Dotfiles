@@ -1,14 +1,12 @@
-#!/bin/bash
-
 # Suppress's termianl errors
-function suppressErr() {
-  $1 $2 2>/dev/null;
-}
-
-# Suppress's termianl warnings
-function suppressWarn() {
-  $1 $2 1>/dev/null;
-}
+#function suppressErr() {
+#  $1 $2 2>/dev/null;
+#}
+#
+## Suppress's termianl warnings
+#function suppressWarn() {
+#  $1 $2 1>/dev/null;
+#}
 
 # Commands
 alias mv='mv -vi'
@@ -18,7 +16,7 @@ alias cp='cp -vi'
 # Editors
 alias vi='nvim'
 alias pdf='xdg-open'
-alias gvim='suppressErr nvim-qt'
+alias gvim='nvim-qt'
 alias vim='nvim'
 
 #Git aliases
@@ -73,7 +71,7 @@ alias repos="cd ~/JOOR/dev/apps;pwd"
 alias crete="cd ~/JOOR/dev/apps/crete;pwd"
 
 # Other
-alias open='suppressErr xdg-open '
+alias open='xdg-open '
 alias myaddress='echo "8460 Limekiln Pk 19095 PA"'
 alias sourceme='source ~/.bashrc'
 alias updateall='sudo apt update && sudo apt upgrade -y'
