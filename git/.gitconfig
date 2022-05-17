@@ -14,7 +14,6 @@
 [credential]
   helper = store
 
-
 [color "status"]
   changed = yellow
 
@@ -26,5 +25,11 @@
 
 [difftool "nvimdiff"]
   cmd = "vim -d -u ~/.vimrc \"$LOCAL\" \"$REMOTE\""
+
 [safe]
 	directory = /home/joshua/JOOR/dev/data/redis
+
+[alias]
+  s = status
+  me = log master.. --oneline
+  me2 = log main.. --oneline
