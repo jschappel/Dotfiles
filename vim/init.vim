@@ -93,7 +93,7 @@ noremap <silent>,<space> :nohlsearch<CR>
 
 " Set Colorscheme
 let g:gruvbox_contrast_dark = 'hard'
-colorscheme gruvbox
+ colorscheme gruvbox
 " colorscheme PaperColor
 
 
@@ -101,6 +101,9 @@ nmap <silent> <A-Up> :wincmd k<CR>
 nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
+
+" Custom commands
+command! Jsonfmt :%!python -m json.tool
 
 "hi CursorLineNR cterm=bold
 "augroup CLNRSet

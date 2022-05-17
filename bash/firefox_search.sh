@@ -1,4 +1,5 @@
-#/bin/bash
+#!/bin/bash
+
 OPTIND=1
 string_args="$*"
 args_trimmed=${string_args:2} #remove the flag
