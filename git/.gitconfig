@@ -26,3 +26,5 @@
 
 [difftool "nvimdiff"]
   cmd = "vim -d -u ~/.vimrc \"$LOCAL\" \"$REMOTE\""
+[safe]
+	directory = /home/joshua/JOOR/dev/data/redis
