@@ -14,10 +14,10 @@ alias rm='rm -vi'
 alias cp='cp -vi'
 
 # Editors
-alias vi='nvim'
+alias vi='vim'
 alias pdf='xdg-open'
 alias gvim='nvim-qt'
-alias vim='nvim'
+alias vim='vim'
 
 #Git aliases
 alias gc='git commit'
@@ -72,6 +72,7 @@ alias crete="cd ~/JOOR/dev/apps/crete;pwd"
 
 # Other
 alias open='xdg-open '
-alias myaddress='echo "8460 Limekiln Pk 19095 PA"'
+alias myaddress='echo "100 N Park Rd Apt 1268, Wyomissing, PA 19610"'
 alias sourceme='source ~/.bashrc'
 alias updateall='sudo apt update && sudo apt upgrade -y'
+

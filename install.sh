@@ -14,6 +14,9 @@ projects=(
   fish
 )
 
+# use nvim instead of vim
+#USEVIM=1
+
 echo "Symlinking files..."
 for proj in "${projects[@]}"; do
   if [ "$proj" == "bash" ] && [ "$OS" == "Darwin" ]; then # MAC

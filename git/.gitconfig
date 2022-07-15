@@ -3,7 +3,7 @@
 	email = jmschappel12@gmail.com
 
 [core]
-  editor = nvim
+  editor = vim
 
 [web]
   browser = firefox
