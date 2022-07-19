@@ -31,5 +31,6 @@
 
 [alias]
   s = status
+  b = branch
   me = log master.. --oneline
   me2 = log main.. --oneline
