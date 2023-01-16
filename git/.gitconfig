@@ -28,8 +28,10 @@
 
 [safe]
 	directory = /home/joshua/JOOR/dev/data/redis
+	directory = /home/joshua/Documents/Cpp/DarkslideVM
 
 [alias]
+  co = checkout
   s = status
   b = branch
   me = log master.. --oneline
