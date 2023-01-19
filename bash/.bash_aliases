@@ -2,6 +2,14 @@
 alias mv='mv -vi'
 alias rm='rm -vi'
 alias cp='cp -vi'
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+
 
 # Editors
 alias vi='vim'
@@ -63,5 +71,4 @@ alias crete="cd ~/JOOR/dev/apps/crete;pwd"
 # Other
 alias open='xdg-open '
 alias myaddress='echo "100 N Park Rd Apt 1268, Wyomissing, PA 19610"'
-alias sourceme='source ~/.bashrc'
 alias updateall='sudo apt update && sudo apt upgrade -y'

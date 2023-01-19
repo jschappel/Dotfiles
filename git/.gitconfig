@@ -4,7 +4,7 @@
 
 [core]
   editor = vim
-
+  pager = less -FRX
 [web]
   browser = firefox
 
@@ -27,8 +27,8 @@
   cmd = "vim -d -u ~/.vimrc \"$LOCAL\" \"$REMOTE\""
 
 [safe]
-	directory = /home/joshua/JOOR/dev/data/redis
-	directory = /home/joshua/Documents/Cpp/DarkslideVM
+  directory = /home/joshua/JOOR/dev/data/redis
+  directory = /home/joshua/Documents/Cpp/DarkslideVM
 
 [alias]
   co = checkout
@@ -36,3 +36,4 @@
   b = branch
   me = log master.. --oneline
   me2 = log main.. --oneline
+
