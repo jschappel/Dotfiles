@@ -57,6 +57,6 @@ set ttyfast
 " allow click goto
 set mouse=a
 
-call plug#begin('~/.vim/plugged')
-  Plug 'dense-analysis/ale'
-call plug#end()
+"call plug#begin('~/.vim/plugged')
+"  Plug 'dense-analysis/ale'
+"call plug#end()

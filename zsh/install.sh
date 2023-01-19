@@ -1,13 +1,11 @@
 #!/usr/bin/env bash
 
-IS_JOOR=1
-
 # Softlink dotfiles to home area
-ln -sf $HEREP/.zshrc $HOME
-ln -sf $HEREP/.zsh_aliases $HOME
+#ln -sf $HEREP/.zshrc $HOME
 ln -sf $HEREP/.zprofile $HOME
+ln -sf $HERE/bash/.bash_aliases $HOME/.zsh_aliases
 
-if [ "$IS_JOOR" == "1" ]; then
+if [ "$LINK_WORK" == "true" ]; then
   echo "Adding JOOR aliases"
-  ln -sf $HEREP/.joor_env $HOME
+  ln -sf ../bash/.joor_env $HOME
 fi

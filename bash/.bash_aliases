@@ -1,13 +1,3 @@
-# Suppress's termianl errors
-#function suppressErr() {
-#  $1 $2 2>/dev/null;
-#}
-#
-## Suppress's termianl warnings
-#function suppressWarn() {
-#  $1 $2 1>/dev/null;
-#}
-
 # Commands
 alias mv='mv -vi'
 alias rm='rm -vi'
@@ -75,4 +65,3 @@ alias open='xdg-open '
 alias myaddress='echo "100 N Park Rd Apt 1268, Wyomissing, PA 19610"'
 alias sourceme='source ~/.bashrc'
 alias updateall='sudo apt update && sudo apt upgrade -y'
-

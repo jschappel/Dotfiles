@@ -4,7 +4,8 @@ OS=$(uname -s)
 HERE="$(cd "$(dirname "$0")" && pwd)"
 cd "$HERE"
 
-echo "Detected OS: $OS"
+TARGET_SHELL="zsh"
+LINK_WORK=true
 
 projects=(
   bash
@@ -14,27 +15,19 @@ projects=(
   fish
 )
 
-# use nvim instead of vim
-#USEVIM=1
 
+
+echo "Linking for shell: ${TARGET_SHELL}"
+echo "Detected OS: $OS"
 echo "Symlinking files..."
 for proj in "${projects[@]}"; do
-  if [ "$proj" == "bash" ] && [ "$OS" == "Darwin" ]; then # MAC
+  if [ "$proj" == "bash" ] && [ "$TARGET_SHELL" != "bash" ]; then
     continue
-  elif [ "$proj" == "fish" ] && [ "$OS" == "Darwin" ]; then # MAC
+  elif [ "$proj" == "fish" ] && [ "$TARGET_SHELL" != "fish" ]; then 
     continue
-  elif [ "$proj" == "zsh" ] && [ "$OS" == "Linux" ]; then
+  elif [ "$proj" == "zsh" ] && [ "$TARGET_SHELL" != "zsh" ]; then
     continue
   else
-    #Determine if using fish or bash
-    if [ "$proj" == "bash" ] && [ "$SHELL" == "/usr/bin/fish" ]; then
-      echo "Skipping bash"
-      continue
-    elif [ "$proj" == "fish" ] && [ "$SHELL" == "/usr/bin/bash" ]; then
-      echo "Skipping fish"
-      continue
-    fi
-
     echo "  $proj"
     HEREP="$HERE/$proj"
     . $HEREP/install.sh
