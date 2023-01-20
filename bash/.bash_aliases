@@ -9,7 +9,8 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-
+#docker
+alias dkill="docker stop  $(docker ps -a -q )"
 
 # Editors
 alias vi='vim'

@@ -14,11 +14,11 @@ if [ -f $HOME/.zsh_aliases ]; then
 fi
 
 if [ -f $HOME/.joor_env ]; then
-  . $HOME/.joor_env
+  source $HOME/.joor_env
 fi
 
-if [ -f $HOME/.joor_env ]; then
-  . $HOME/.joor_env
+if [ -f $HOME/.secretes ]; then
+  source $HOME/.secretes
 fi
 
 # opam configuration
@@ -26,5 +26,8 @@ fi
 
 # re-map caplocks to control
 setxkbmap -option caps:ctrl_modifier
+
+# add Doom to path
+export PATH="$HOME/.emacs.d/bin:$PATH"
 
 alias sourceme='source ~/.zshrc'
