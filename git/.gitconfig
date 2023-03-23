@@ -4,7 +4,20 @@
 
 [core]
   editor = vim
-  pager = less -FRX
+  pager = delta # https://github.com/dandavison/delta
+  #pager = less -FRX
+
+[interactive]
+  diffFilter = delta --color-only
+
+[delta]
+  navigate = true    # use n and N to move between diff sections
+  light = false      # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+  line-numbers = true
+
+[merge]
+  conflictstyle = diff3
+
 
 [web]
   browser = firefox
@@ -19,20 +32,20 @@
   changed = yellow
 
 [diff]
-  tool = vim
+  colorMoved = default
 
 [difftool]
   tool = gvimdiff
 
-[difftool "nvimdiff"]
-  cmd = "vim -d -u ~/.vimrc \"$LOCAL\" \"$REMOTE\""
 
 [safe]
   directory = /home/joshua/JOOR/dev/data/redis
   directory = /home/joshua/Documents/Cpp/DarkslideVM
+  directory = /home/jschappel/JOOR/dev/data/redis
 
 [alias]
   co = checkout
+  ca = commit --amend
   s = status
   b = branch
   me = log master.. --oneline

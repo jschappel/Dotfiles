@@ -2,7 +2,7 @@
 alias mv='mv -vi'
 alias rm='rm -vi'
 alias cp='cp -vi'
-alias ll='ls -alF'
+alias ll='exa -al --color=always --group-directories-first'
 alias la='ls -A'
 alias l='ls -CF'
 alias grep='grep --color=auto'
@@ -15,8 +15,6 @@ alias dkill='docker kill  $(docker ps -q)'
 # Editors
 alias vi='vim'
 alias pdf='xdg-open'
-alias gvim='nvim-qt'
-alias vim='vim'
 
 #Git aliases
 alias gc='git commit'
@@ -35,7 +33,7 @@ alias python='python3'
 #Terminals
 alias gterm='gnome-terminal'
 alias gtab='gnome-terminal --tab'
-alias ntw='gnome-terminal'
+alias ntw='alacritty'
 alias xtw='xterm -fa Monospace -fs 12 &'
 
 # Internet Browser

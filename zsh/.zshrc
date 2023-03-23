@@ -20,10 +20,17 @@ fi
 # opam configuration
 [[ ! -r /home/jschappel/.opam/opam-init/init.zsh ]] || source /home/jschappel/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
 
+# ghcup-env
+[ -f "/home/jschappel/.ghcup/env" ] && source "/home/jschappel/.ghcup/env" 
+
 # re-map caplocks to control
 setxkbmap -option caps:ctrl_modifier
 
 # add Doom to path
-export PATH="$HOME/.emacs.d/bin:$PATH"
+export PATH="$HOME/.config/emacs/bin:$PATH"
 
 alias sourceme='source ~/.zshrc'
+
+colorscript random
+
+fpath+=${ZDOTDIR:-~}/.zsh_functions
