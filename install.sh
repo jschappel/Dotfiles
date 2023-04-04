@@ -12,7 +12,6 @@ projects=(
   git
   vim
   zsh
-  fish
 )
 
 
@@ -22,8 +21,6 @@ echo "Detected OS: $OS"
 echo "Symlinking files..."
 for proj in "${projects[@]}"; do
   if [ "$proj" == "bash" ] && [ "$TARGET_SHELL" != "bash" ]; then
-    continue
-  elif [ "$proj" == "fish" ] && [ "$TARGET_SHELL" != "fish" ]; then 
     continue
   elif [ "$proj" == "zsh" ] && [ "$TARGET_SHELL" != "zsh" ]; then
     continue

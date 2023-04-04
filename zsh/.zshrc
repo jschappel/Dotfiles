@@ -9,19 +9,6 @@ if [ -f $HOME/.zsh_aliases ]; then
   source $HOME/.zsh_aliases
 fi
 
-if [ -f $HOME/.joor_env ]; then
-  source $HOME/.joor_env
-fi
-
-if [ -f $HOME/.secretes ]; then
-  source $HOME/.secretes
-fi
-
-# opam configuration
-[[ ! -r /home/jschappel/.opam/opam-init/init.zsh ]] || source /home/jschappel/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
-
-# ghcup-env
-[ -f "/home/jschappel/.ghcup/env" ] && source "/home/jschappel/.ghcup/env" 
 
 # re-map caplocks to control
 setxkbmap -option caps:ctrl_modifier
@@ -30,7 +17,25 @@ setxkbmap -option caps:ctrl_modifier
 export PATH="$HOME/.config/emacs/bin:$PATH"
 
 alias sourceme='source ~/.zshrc'
-
 colorscript random
-
 fpath+=${ZDOTDIR:-~}/.zsh_functions
+
+
+# opam configuration
+[[ ! -r /home/jschappel/.opam/opam-init/init.zsh ]] || source /home/jschappel/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+
+# ghcup-env
+[ -f "/home/jschappel/.ghcup/env" ] && source "/home/jschappel/.ghcup/env"
+
+## pyenv configs
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+# Created by `pipx` on 2023-01-31 14:36:27
+export PATH="$PATH:/home/jschappel/.local/bin"
+
+# nvm stuff
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

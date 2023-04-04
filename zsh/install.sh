@@ -7,6 +7,5 @@ ln -sf $HEREP/.oh_my_zsh_config $HOME
 ln -sf $HERE/bash/.bash_aliases $HOME/.zsh_aliases
 
 if [ "$LINK_WORK" == "true" ]; then
-  echo "Adding JOOR aliases"
-  ln -sf $HERE/bash/.joor_env $HOME
+  echo "Nothing to link"
 fi
