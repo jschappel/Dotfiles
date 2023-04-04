@@ -25,7 +25,9 @@ for proj in "${projects[@]}"; do
   elif [ "$proj" == "zsh" ] && [ "$TARGET_SHELL" != "zsh" ]; then
     continue
   else
-    echo "  $proj"
+    echo "------------"
+    echo "---$proj---"
+    echo "------------"
     HEREP="$HERE/$proj"
     . $HEREP/install.sh
   fi

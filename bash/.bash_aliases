@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Commands
 alias mv='mv -vi'
 alias rm='rm -vi'
@@ -17,7 +19,9 @@ alias vi='vim'
 alias pdf='xdg-open'
 
 #Git aliases
-alias gc='git commit'
+alias gc='git commit -v'
+alias ga='git commit --amend'
+alias gp='git commit --patch'
 
 #GCC
 alias gccc='gcc -Wall -std=c++17'
@@ -42,7 +46,7 @@ alias ff="$HOME/Github/Dotfiles/bash/firefox_search.sh -s"
 alias ffw="$HOME/Github/Dotfiles/bash/firefox_search.sh -w"
 
 # Directories
-alias ghd='cd ~/Github;pwd'
+alias repos='cd ~/Github;pwd'
 alias rsd='cd ~/Documents/Rust;pwd'
 alias hsd='cd ~/Documents/Haskell;pwd'
 alias jsd='cd ~/Documents/Javascript;pwd'
@@ -53,19 +57,11 @@ alias ocd='cd ~/Documents/OCaml;pwd'
 alias smd='cd ~/Documents/SML;pwd'
 alias greend='cd ~/Github/Green;pwd'
 alias greenc='cd ~/Github/Green/Green-Compiler-Repository-GitHub;pwd'
-alias dana='cd ~/Dana;pwd'
 
 # Make & CMake Commands
 alias maket='make test -C'
 alias cmakeb='cmake --build'
 alias ctest='ctest -VV'
-
-# Games
-alias runelite='java -jar /usr/local/bin/RuneLite.jar'
-
-# Joor aliases
-alias repos="cd ~/JOOR/dev/apps;pwd"
-alias crete="cd ~/JOOR/dev/apps/crete;pwd"
 
 # Other
 alias open='xdg-open '
