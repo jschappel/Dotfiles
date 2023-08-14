@@ -10,8 +10,9 @@ LINK_WORK=true
 projects=(
   bash
   git
-  vim
   zsh
+  nvim
+  #vim
 )
 
 

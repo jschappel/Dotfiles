@@ -51,3 +51,5 @@
   me = log master.. --oneline
   me2 = log main.. --oneline
 
+[pull]
+	rebase = false

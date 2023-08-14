@@ -15,7 +15,8 @@ alias egrep='egrep --color=auto'
 alias dkill='docker kill  $(docker ps -q)'
 
 # Editors
-alias vi='vim'
+alias vi='nvim'
+alias vim='nvim'
 alias pdf='xdg-open'
 
 #Git aliases
